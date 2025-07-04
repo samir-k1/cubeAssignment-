@@ -1,0 +1,662 @@
+
+:root {
+    /* Colors */
+    --primary-green: #2d5a27;
+    --primary-green-light: #4a7c59;
+    --primary-green-dark: #1a3d1a;
+    --accent-green: #5a8a5a;
+    --text-dark: #2c3e2c;
+    --text-light: #ffffff;
+    --text-muted: #6b7c6b;
+    --background-light: #f8fdf8;
+    --background-overlay: rgba(255, 255, 255, 0.1);
+    --border-light: rgba(255, 255, 255, 0.2);
+    
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;k
+    
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-full: 9999px;
+  
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: transparent;
+    padding: var(--spacing-sm) 0;
+}
+
+.nav__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-green);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+/* Navigation Menu */
+.nav__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    list-style: none;
+}
+
+.nav__link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.nav__link:hover {
+    color: var(--primary-green);
+}
+
+.nav__dropdown-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Navigation Actions */
+.nav__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.nav__search {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    color: var(--text-dark);
+    transition: var(--transition-smooth);
+}
+
+.nav__search:hover {
+    background: var(--background-overlay);
+    color: var(--primary-green);
+}
+
+.nav__search svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-semibold);
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background: var(--primary-green);
+    color: var(--text-light);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+    background: var(--primary-green-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn--hero {
+   background: linear-gradient(to bottom,rgba(3, 46, 21), rgba(1, 102, 48));
+    color: var(--text-light);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow-sm);
+        margin-bottom: 40px;
+}
+
+.btn--hero:hover {
+   background: linear-gradient(to bottom,rgba(3, 46, 21, 0.8), rgba(1, 102, 48, 0.8));
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+
+.hero {
+    min-height: 100vh;
+    /* Remove or comment out the gradient */
+    /* background: linear-gradient(135deg, #e8f5e8 0%, #d4f1d4 100%); */
+    
+    /* Add your background image */
+    background-image: url('../assets/HeroSection.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
+}
+
+.hero__content {
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+  margin-bottom: 80px; /* Or adjust as needed */
+}
+
+/* Hero Badge */
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    color: white;
+    /* background: linear-gradient(to bottom, #032E15, #016630);   */
+   background-image: linear-gradient(to bottom, #7eeead, #539d76);
+    
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.hero__badge-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.9;
+}
+
+/* Hero Title */
+.hero__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--text-dark);
+    line-height: 1;
+    margin-bottom: var(--spacing-xl);
+    letter-spacing: -0.02em;
+    max-width: 1200px;
+}
+
+/* Hero Statistics */
+.hero__stats {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    flex-wrap: wrap;
+}
+
+.hero__stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__stat-number {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: var(--font-weight-extrabold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+
+    /* Gradient styles */
+    background-image: linear-gradient(to bottom, #7eeead, #539d76);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero__stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Hero Actions */
+
+/* ===================================
+   FEATURES SECTION
+   =================================== */
+
+.features {
+    background: var(--background-light);
+    padding: var(--spacing-xl) 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.features__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    transition: var(--transition-smooth);
+}
+
+.feature:hover {
+    transform: translateY(-2px);
+}
+
+.feature__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--text-light);
+    color: var(--primary-green);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.feature__title {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-dark);
+}
+/* COMMON SECTION PROBLEMS AND FIXES */
+
+/* 1. RESET ALL SECTIONS - Add this to fix section issues */
+section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* 2. SPECIFIC SECTION FIXES */
+.hero {
+    /* Your existing styles PLUS these fixes */
+    min-height: 100vh;
+    background-image: url('../assets/HeroSection.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    
+    /* ADD THESE MOBILE FIXES */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* 3. CONTAINER FIXES INSIDE SECTIONS */
+.hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
+    
+    /* ADD THESE */
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* 4. CONTENT FIXES INSIDE SECTIONS */
+.hero__content {
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+    margin-bottom: 80px;
+    
+    /* ADD THESE */
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* Prevent text overflow */
+}
+
+/* 5. STATS CONTAINER FIXES */
+.hero__stats {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    flex-wrap: wrap;
+    
+    /* ADD THESE */
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* 6. TITLE FIXES */
+.hero__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--text-dark);
+    line-height: 1;
+    margin-bottom: var(--spacing-xl);
+    letter-spacing: -0.02em;
+    max-width: 1200px;
+    
+    /* ADD THESE MOBILE FIXES */
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* 7. MOBILE RESPONSIVE FIXES FOR SECTIONS */
+@media (max-width: 768px) {
+    section {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .hero {
+        padding-top: 60px;
+        text-align: center;
+        min-height: 100vh;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .hero__container {
+        padding: 0 1rem;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .hero__content {
+        max-width: 100%;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+    
+    .hero__title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+    
+    .hero__stats {
+        justify-content: center;
+        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .hero__stat {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero__title {
+        padding: 0 1rem;
+    }
+}
+
+/* 8. GLOBAL OVERFLOW PREVENTION */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* 9. ENSURE ALL ELEMENTS IN SECTIONS USE BOX-SIZING */
+section *,
+section *::before,
+section *::after {
+    box-sizing: border-box;
+}
+
+/* 10. DEBUG HELPER - Add this temporarily to see section boundaries */
+/*
+section {
+    border: 2px solid red !important;
+    outline: 2px solid blue !important;
+}
+*/
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .nav__menu {
+        display: none;
+    }
+    
+    .nav__actions {
+        gap: var(--spacing-sm);
+    }
+    
+    .hero {
+        padding-top: 60px;
+        text-align: center;
+    }
+    
+    .hero__content {
+        max-width: 100%;
+    }
+    
+    .hero__stats {
+        justify-content: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .features__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .feature {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .nav__container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero__container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero__stats {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .hero__stat {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .btn--hero {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Large Screen Optimization */
+@media (min-width: 1400px) {
+    .nav__container,
+    .hero__container,
+    .features__container {
+        max-width: 1400px;
+    }
+}
+
+/* ===================================
+   ACCESSIBILITY & PERFORMANCE
+   =================================== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for accessibility */
+.btn:focus-visible,
+.nav__link:focus-visible,
+.nav__search:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .hero__badge,
+    .btn--primary,
+    .btn--hero {
+        border: 2px solid var(--text-dark);
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .hero__actions,
+    .nav__search {
+        display: none;
+    }
+    
+    .hero {
+        background: white;
+        color: black;
+        min-height: auto;
+    }
+}

@@ -1,0 +1,446 @@
+/* Product Section Styles */
+.productSection {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.productSection__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Left Side - Gallery */
+.productSection__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.productSection__main-image {
+    position: relative;
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    border: 1px solid #e0e0e0;
+}
+
+.productSection__main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productSection__nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productSection__nav-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.productSection__nav-btn--prev {
+    left: 15px;
+}
+
+.productSection__nav-btn--next {
+    right: 15px;
+}
+
+.productSection__nav-btn svg {
+    width: 20px;
+    height: 20px;
+    color: #333;
+}
+
+.productSection__dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.productSection__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.productSection__dot--active {
+    background: white;
+}
+
+.productSection__thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.productSection__thumbnail-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.productSection__thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.productSection__thumb:hover {
+    transform: scale(1.05);
+}
+
+/* Right Side - Details */
+.productSection__details {
+    padding: 16px;
+}
+
+.productSection__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.productSection__rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.productSection__stars {
+    display: flex;
+    gap: 2px;
+}
+
+.productSection__star {
+    color: #16a085;
+    font-size: 1.2rem;
+}
+
+.productSection__rating-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.productSection__description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Subscription Container */
+.productSection__subscription-container {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.productSection__badge {
+    background: linear-gradient(to bottom,rgba(3, 46, 21), rgba(1, 102, 48));
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.productSection__option {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+    padding: 16px 20px;
+    margin: 0;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.productSection__option:last-child {
+    border-bottom: none;
+}
+
+.productSection__option--selected {
+    background: #f8fffe;
+    border-left: 4px solid #16a085;
+}
+
+.productSection__option input[type="radio"] {
+    display: none;
+}
+
+.productSection__option-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.productSection__option-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.productSection__option-price {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.productSection__option-old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+/* Option Content */
+.productSection__option-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: #f8fffe;
+    border-top: 1px solid #e0e0e0;
+}
+
+.productSection__option-content--active {
+    max-height: 1000px;
+    padding: 20px;
+}
+
+.productSection__fragrance-selection {
+    margin-bottom: 20px;
+}
+
+.productSection__fragrance-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.productSection__fragrance-note {
+    color: #16a085;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.productSection__fragrance-options {
+    display: flex;
+    gap: 12px;
+}
+
+.productSection__fragrance-option input[type="radio"] {
+    display: none;
+}
+
+.productSection__fragrance-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.productSection__fragrance-option input[type="radio"]:checked + label {
+    border-color: #16a085;
+    background: #f0fffe;
+}
+
+.productSection__fragrance-img {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.productSection__fragrance-option span {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.productSection__included {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.productSection__included-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.productSection__included-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.productSection__included-left h5,
+.productSection__included-right h5 {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.productSection__included-img {
+    width: 70px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.productSection__included-bottles {
+    display: flex;
+    gap: 6px;
+}
+
+.productSection__included-small {
+    width: 35px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.productSection__features {
+    margin: 0;
+}
+
+.productSection__feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.productSection__feature-icon {
+    color: #16a085;
+    font-weight: bold;
+}
+
+.productSection__add-to-cart {
+    width: 100%;
+    background: linear-gradient(135deg, #15724b 0%, #063229 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(22, 160, 133, 0.3);
+}
+
+.productSection__add-to-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(22, 160, 133, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .productSection__container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .productSection__title {
+        font-size: 2rem;
+    }
+    
+    .productSection__fragrance-options {
+        flex-direction: column;
+    }
+    
+    .productSection__included-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .productSection__details {
+        padding: 10px;
+    }
+    
+    .productSection__subscription-container {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productSection {
+        padding: 40px 0;
+    }
+    
+    .productSection__container {
+        padding: 0 16px;
+    }
+    
+    .productSection__thumbnail-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .productSection__fragrance-options {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .productSection__fragrance-img {
+        width: 40px;
+        height: 55px;
+    }
+    
+    .productSection__option {
+        padding: 14px 16px;
+    }
+    
+    .productSection__badge {
+        padding: 10px 16px;
+    }
+}

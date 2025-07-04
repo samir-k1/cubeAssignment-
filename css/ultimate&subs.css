@@ -1,0 +1,344 @@
+:root {
+  --green-dark: #003b1d;
+  --green-mid: #015b2f;
+  --green-card: rgba(255, 255, 255, 0.08);
+  --beige-1: #dad3c0;
+  --beige-2: #c9c0a7;
+  --radius-xl: 20px;
+  --radius-md: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: min(1200px, 100%);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* ---------- Ultimate Fragrance ---------- */
+.fragrance-banner {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--green-mid) 0%, var(--green-dark) 100%);
+  color: #ffffff;
+}
+
+.fragrance-banner .wrap {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.fragrance-img {
+  flex: 0 0 40%;
+  padding: 10px;
+}
+
+.fragrance-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fragrance-content {
+  flex: 1 1 50%;
+}
+
+.edition {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  background: var(--green-card);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(3px);
+}
+
+.feature-card .icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.feature-card h4 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.cta {
+  margin-top: 1.75rem;
+  padding: 0.75rem 2.25rem;
+  border: none;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--green-mid);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Subscription Section */
+.subscription-section {
+  background-image: url('/assets/bgSubs.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 60px 80px;
+  max-width: 1200px;
+  margin: 60px auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+}
+
+.subscription-content {
+  max-width: 500px;
+}
+
+.label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.subscription-content h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: white;
+  line-height: 1.4;
+}
+
+.subscription-content h2 span {
+  font-weight: 700;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tags span {
+  background-color: white;
+  color: #1e1e1e;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.subscribe-btn {
+  background: linear-gradient(to bottom, rgba(3, 46, 21), rgba(1, 102, 48));
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: linear-gradient(to bottom, rgba(1, 102, 48), rgba(3, 46, 21));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .fragrance-banner .wrap {
+    gap: 2rem;
+  }
+  
+  .fragrance-img {
+    flex: 0 0 35%;
+  }
+  
+  .subscription-section {
+    padding: 40px 60px;
+    margin: 40px auto;
+  }
+  
+  .subscription-content h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding-inline: 1.5rem;
+  }
+  
+  .fragrance-banner {
+    padding: 2rem 0;
+  }
+  
+  .fragrance-banner .wrap {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .fragrance-img {
+    flex: none;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .fragrance-content {
+    flex: none;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .cta {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .subscription-section {
+    padding: 40px 30px;
+    margin: 30px auto;
+    min-height: 400px;
+    text-align: center;
+  }
+  
+  .subscription-content {
+    max-width: 100%;
+  }
+  
+  .subscription-content h2 {
+    font-size: 22px;
+  }
+  
+  .tags {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding-inline: 1rem;
+  }
+  
+  .fragrance-banner {
+    padding: 1.5rem 0;
+  }
+  
+  .edition {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 0.875rem;
+  }
+  
+  .feature-card h4 {
+    font-size: 0.95rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.8rem;
+  }
+  
+  .cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .subscription-section {
+    padding: 30px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+  }
+  
+  .subscription-content h2 {
+    font-size: 20px;
+  }
+  
+  .tags {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .tags span {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  .subscribe-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .fragrance-banner .wrap {
+    gap: 1.5rem;
+  }
+  
+  .subscription-section {
+    padding: 25px 15px;
+  }
+  
+  .subscription-content h2 {
+    font-size: 18px;
+  }
+}

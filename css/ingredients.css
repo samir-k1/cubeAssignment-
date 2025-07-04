@@ -1,0 +1,190 @@
+/* Ingredients Section Styles */
+.ingredients {
+    padding: 120px 0;
+    background: #ffffff;
+    position: relative;
+}
+
+.ingredients__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+/* Content Section */
+.ingredients__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ingredients__badge {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.ingredients__badge-text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.ingredients__title {
+    font-size: 3.1rem;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    max-width: 6;
+}
+
+.ingredients__description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.ingredients__description strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.ingredients__actions {
+    margin-top: 16px;
+}
+
+.btn--ingredients {
+  background: linear-gradient(to bottom,rgba(3, 46, 21), rgba(1, 102, 48));
+    color: white;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn--ingredients:hover {
+    background: #236b43;
+    transform: translateY(-1px);
+}
+
+/* Visual Section */
+.ingredients__visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.ingredients__image {
+    position: relative;
+    z-index: 2;
+}
+
+.ingredients__main-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.ingredients__main-image:hover {
+    transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-15px) rotate(-1deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .ingredients__container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+    
+    .ingredients__title {
+        font-size: 2.8rem;
+        max-width: 100%;
+    }
+    
+    .ingredients__visual {
+        height: 500px;
+    }
+    
+    .ingredients__main-image {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ingredients {
+        padding: 80px 0;
+    }
+    
+    .ingredients__container {
+        padding: 0 16px;
+        gap: 40px;
+    }
+    
+    .ingredients__title {
+        font-size: 2.2rem;
+    }
+    
+    .ingredients__description {
+        font-size: 1.1rem;
+    }
+    
+    .ingredients__visual {
+        height: 400px;
+    }
+    
+    .ingredients__main-image {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ingredients__title {
+        font-size: 1.8rem;
+    }
+    
+    .btn--ingredients {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+    
+    .ingredients__visual {
+        height: 350px;
+    }
+    
+    .ingredients__main-image {
+        max-width: 300px;
+    }
+}
