@@ -230,4 +230,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+
+    const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, observerOptions);
+
+// Observe all animatable elements
+document.querySelectorAll('.productSection__gallery, .productSection__main-image, .productSection__nav-btn, .productSection__dots, .productSection__thumbnails, .productSection__details, .productSection__title, .productSection__rating, .productSection__star, .productSection__description, .productSection__subscription-container, .productSection__badge, .productSection__option, .productSection__included, .productSection__feature, .productSection__add-to-cart').forEach(el => {
+    observer.observe(el);
+});
 });

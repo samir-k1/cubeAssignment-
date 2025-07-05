@@ -1,7 +1,7 @@
 .footer {
   background-color: #1a3a2a;
   color: #ffffff;
-  padding: 60px 0 0 0;
+  padding: 60px 0;
   margin-top: 80px;
 }
 
@@ -15,7 +15,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
-  margin-bottom: 40px;
 }
 
 .footer-brand {
@@ -172,40 +171,6 @@
   color: #ffffff;
 }
 
-.footer-bottom {
-  border-top: 1px solid #2d5a3d;
-  padding: 30px 0;
-  margin-top: 40px;
-}
-
-.footer-bottom-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-copyright {
-  font-size: 0.85rem;
-  color: #7a8a82;
-  margin: 0;
-}
-
-.footer-bottom-links {
-  display: flex;
-  gap: 30px;
-}
-
-.footer-bottom-link {
-  font-size: 0.85rem;
-  color: #7a8a82;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-bottom-link:hover {
-  color: #b8c9c0;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-content {
@@ -217,21 +182,11 @@
     flex-direction: column;
     gap: 30px;
   }
-  
-  .footer-bottom-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .footer-bottom-links {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 40px 0 0 0;
+    padding: 40px 0;
   }
   
   .footer-content {
@@ -249,10 +204,5 @@
   
   .footer-newsletter-button {
     border-radius: 4px;
-  }
-  
-  .footer-bottom-links {
-    flex-direction: column;
-    gap: 15px;
   }
 }

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GTG - Award-winning perfumes. Live your best life with premium fragrances.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GTG - Live Your Best Life</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="css/herosection.css">
@@ -27,7 +30,7 @@
 </head>
 <body>
     <!-- Header Navigation -->
-     <header class="header">
+   <header class="header animate-on-scroll">
         <nav class="nav__container">
             <a href="#" class="logo">GTG</a>
             
@@ -62,7 +65,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero animate-on-scroll">
         <div class="hero__container">
             <div class="hero__content">
                 <!-- Award Badge -->
@@ -100,8 +103,9 @@
         </div>
     </section>
 
+
     <!-- Features Section -->
-    <section class="features">
+    <section class="features animate-on-scroll">
         <div class="features__container">
             <div class="features__grid">
                 <div class="feature">
@@ -167,7 +171,7 @@
         });
     </script>
     <!-- Ingredients Section -->
-<section class="ingredients">
+<section class="ingredients animate-on-scroll">
     <div class="ingredients__container">
         <div class="ingredients__content">
             <div class="ingredients__text">
@@ -371,81 +375,115 @@
                     
                     <!-- Double Subscription Content -->
                     <div class="productSection__option-content" id="double-content">
-                        <!-- Same content as single for now -->
-                        <div class="productSection__fragrance-selection">
-                            <h4 class="productSection__fragrance-title">Choose a Fragrance</h4>
-                            <div class="productSection__fragrance-note">★ FEATURED</div>
-                            
-                            <div class="productSection__fragrance-options">
-                                <div class="productSection__fragrance-option">
-                                    <input type="radio" id="citrus-double" name="fragrance-double" checked>
-                                    <label for="citrus-double">
-                                        <img src="assets/citrus.png" alt="Citrus" class="productSection__fragrance-img">
-                                        <span>Citrus</span>
-                                    </label>
-                                </div>
-                                
-                                <div class="productSection__fragrance-option">
-                                    <input type="radio" id="lily-double" name="fragrance-double">
-                                    <label for="lily-double">
-                                        <img src="assets/lily.png" alt="Lily" class="productSection__fragrance-img">
-                                        <span>Lily</span>
-                                    </label>
-                                </div>
-                                
-                                <div class="productSection__fragrance-option">
-                                    <input type="radio" id="rose-double" name="fragrance-double">
-                                    <label for="rose-double">
-                                        <img src="assets/rose.png" alt="Rose" class="productSection__fragrance-img">
-                                        <span>Rose</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="productSection__included">
-                            <h4 class="productSection__included-title">What's included:</h4>
-                            
-                            <div class="productSection__included-content">
-                                <div class="productSection__included-left">
-                                    <h5>Every 30 Days</h5>
-                                    <img src="assets/citrus.png" alt="Monthly Bottle" class="productSection__included-img">
-                                </div>
-                                
-                                <div class="productSection__included-right">
-                                    <h5>One Time (Free)</h5>
-                                    <div class="productSection__included-bottles">
-                                        <img src="assets/citrus.png" alt="Free Bottle 1" class="productSection__included-small">
-                                        <img src="assets/lily.png" alt="Free Bottle 2" class="productSection__included-small">
-                                        <img src="assets/rose.png" alt="Free Bottle 3" class="productSection__included-small">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="productSection__features">
-                            <div class="productSection__feature">
-                                <span class="productSection__feature-icon">✓</span>
-                                <span>2 Bottles Shipped Monthly</span>
-                            </div>
-                            <div class="productSection__feature">
-                                <span class="productSection__feature-icon">✓</span>
-                                <span>Free Samples For Original, Lily And Rose Fragrances</span>
-                            </div>
-                            <div class="productSection__feature">
-                                <span class="productSection__feature-icon">✓</span>
-                                <span>50% OFF Shipping</span>
-                            </div>
-                            <div class="productSection__feature">
-                                <span class="productSection__feature-icon">✓</span>
-                                <span>Pause Or Cancel Anytime After 3 Months Minimum</span>
-                            </div>
-                            <div class="productSection__feature">
-                                <span class="productSection__feature-icon">✓</span>
-                                <span>30 Day Money Back Guarantee*</span>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Choose Fragrance 1 -->
+    <div class="productSection__fragrance-selection">
+        <h4 class="productSection__fragrance-title">Choose Fragrance 1</h4>
+        <div class="productSection__fragrance-note">★ FEATURED</div>
+        
+        <div class="productSection__fragrance-options">
+            <div class="productSection__fragrance-option">
+                <input type="radio" id="original-double-1" name="fragrance-double-1" checked>
+                <label for="original-double-1">
+                    <img src="assets/citrus.png" alt="Original" class="productSection__fragrance-img">
+                    <span>Original</span>
+                </label>
+            </div>
+            
+            <div class="productSection__fragrance-option">
+                <input type="radio" id="lily-double-1" name="fragrance-double-1">
+                <label for="lily-double-1">
+                    <img src="assets/lily.png" alt="Lily" class="productSection__fragrance-img">
+                    <span>Lily</span>
+                </label>
+            </div>
+            
+            <div class="productSection__fragrance-option">
+                <input type="radio" id="rose-double-1" name="fragrance-double-1">
+                <label for="rose-double-1">
+                    <img src="assets/rose.png" alt="Rose" class="productSection__fragrance-img">
+                    <span>Rose</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Choose Fragrance 2 -->
+    <div class="productSection__fragrance-selection">
+        <h4 class="productSection__fragrance-title">Choose Fragrance 2</h4>
+        <div class="productSection__fragrance-note">★ FEATURED</div>
+        
+        <div class="productSection__fragrance-options">
+            <div class="productSection__fragrance-option">
+                <input type="radio" id="original-double-2" name="fragrance-double-2" checked>
+                <label for="original-double-2">
+                    <img src="assets/citrus.png" alt="Original" class="productSection__fragrance-img">
+                    <span>Original</span>
+                </label>
+            </div>
+            
+            <div class="productSection__fragrance-option">
+                <input type="radio" id="lily-double-2" name="fragrance-double-2">
+                <label for="lily-double-2">
+                    <img src="assets/lily.png" alt="Lily" class="productSection__fragrance-img">
+                    <span>Lily</span>
+                </label>
+            </div>
+            
+            <div class="productSection__fragrance-option">
+                <input type="radio" id="rose-double-2" name="fragrance-double-2">
+                <label for="rose-double-2">
+                    <img src="assets/rose.png" alt="Rose" class="productSection__fragrance-img">
+                    <span>Rose</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <!-- What's Included -->
+    <div class="productSection__included">
+        <h4 class="productSection__included-title">What's Included:</h4>
+        
+        <div class="productSection__included-content">
+            <div class="productSection__included-left">
+                <h5>Every 30 Days</h5>
+                <img src="assets/citrus.png" alt="Monthly Bottle" class="productSection__included-img">
+            </div>
+            
+            <div class="productSection__included-right">
+                <h5>One Time (Free)</h5>
+                <div class="productSection__included-bottles">
+                    <img src="assets/citrus.png" alt="Free Bottle 1" class="productSection__included-small">
+                    <img src="assets/lily.png" alt="Free Bottle 2" class="productSection__included-small">
+                    <img src="assets/rose.png" alt="Free Bottle 3" class="productSection__included-small">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Features -->
+    <div class="productSection__features">
+        <div class="productSection__feature">
+            <span class="productSection__feature-icon">✓</span>
+            <span>1 Bottle Shipped Monthly</span>
+        </div>
+        <div class="productSection__feature">
+            <span class="productSection__feature-icon">✓</span>
+            <span>Free Sampler For Original, Lily And Rose Fragrances</span>
+        </div>
+        <div class="productSection__feature">
+            <span class="productSection__feature-icon">✓</span>
+            <span>50% OFF Shipping</span>
+        </div>
+        <div class="productSection__feature">
+            <span class="productSection__feature-icon">✓</span>
+            <span>Pause Or Cancel Anytime After 3 Months Minimum</span>
+        </div>
+        <div class="productSection__feature">
+            <span class="productSection__feature-icon">✓</span>
+            <span>28 Day Money Back Guarantee*</span>
+        </div>
+    </div>
+</div>
                     
                     <!-- Try Once Option -->
                     <div class="productSection__option" data-option="try-once">
@@ -598,83 +636,89 @@
 </section>
 
 <!-- ─────────── Collection  Section  ─────────── -->
-<section class="collection-section">
-    <div class="collection-container">
-        <div class="collection-content">
-            <h2>Our Collection</h2>
+<section class="collection-section  animate-on-scroll">
+        <div class="collection-container">
+            <div class="collection-content">
+                <h2>Our Collection</h2>
+                
+                <div class="accordion-wrapper">
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Signature Scents</span>
+                            <span class="accordion-icon">−</span>
+                        </button>
+                        <div class="accordion-content active">
+                            <div class="accordion-content-inner">
+                                Discover our curated line of signature perfumes, designed to become your daily companion.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Luxury Collections</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Experience our premium collection of handcrafted fragrances, each telling a unique story through carefully selected ingredients.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Artisan Series</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Indulge in our luxury fragrance line, where tradition meets innovation in every bottle.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>Natural Essences</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Explore our exclusive collection of artisanal perfumes, crafted with the finest natural essences.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Signature Scents</span>
-                    <span class="accordion-icon">−</span>
-                </button>
-                <div class="accordion-content active">
-                    <div class="accordion-content-inner">
-                        Discover our curated line of signature perfumes, designed to become your daily companion.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Signature Scents</span>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="accordion-content-inner">
-                        Experience our premium collection of handcrafted fragrances, each telling a unique story through carefully selected ingredients.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Signature Scents</span>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="accordion-content-inner">
-                        Indulge in our luxury fragrance line, where tradition meets innovation in every bottle.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    <span>Signature Scents</span>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="accordion-content-inner">
-                        Explore our exclusive collection of artisanal perfumes, crafted with the finest natural essences.
-                    </div>
-                </div>
+            <div class="image-section">
+                <img src="/assets//ourCollections.png" alt="Our perfume collection showcase" onerror="this.parentElement.innerHTML='<span>Our Collections Image</span>'" />
             </div>
         </div>
-
-       <div class="image-placeholder">
-    <img src="/assets//ourCollections.png" alt="Descriptive alt text" />
-</div>
-    </div>
-</section>
-
+        
+  
+      
+    </section>
+      <!-- Stats Section (Green Strip) -->
+<!-- Make sure your HTML looks like this -->
 <section class="stats-section">
     <div class="stats-container">
         <div class="stat-item">
-            <div class="stat-number">84%</div>
-            <div class="stat-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="stat-number" data-target="84">0</div>
+            <div class="stat-description">Customer Satisfaction Rate</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">78%</div>
-            <div class="stat-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="stat-number" data-target="78">0</div>
+            <div class="stat-description">Project Success Rate</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">89%</div>
-            <div class="stat-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="stat-number" data-target="89">0</div>
+            <div class="stat-description">Client Retention Rate</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">90%</div>
-            <div class="stat-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="stat-number" data-target="90">0</div>
+            <div class="stat-description">On-Time Delivery Rate</div>
         </div>
     </div>
 </section>
@@ -704,159 +748,161 @@
 </script>
   
         </div>  
-        <section class="gtg-comparison">
+     <section class="gtg-comparison">
         <div class="container">
             <h2 class="section-title">Why GTG is the #1 Choice</h2>
             
-            <div class="comparison-table">
-                <div class="table-header">
-                    <div class="header-cell empty">
-                        <span class="qualities-text">Qualities</span>
-                    </div>
-                    <div class="header-cell">
-                        <div class="product-item">
-                            <img src="./assets/bgSubs.png" alt="GTG" class="product-image">
-                            <span class="product-name">GTG</span>
-                        </div>
-                    </div>
-                    <div class="header-cell">
-                        <div class="product-item">
-                            <img src="/assets/img2.png" alt="Axe" class="product-image">
-                            <span class="product-name">Axe</span>
-                        </div>
-                    </div>
-                    <div class="header-cell">
-                        <div class="product-item">
-                            <img src="/assets/img3.png" alt="Beta" class="product-image">
-                            <span class="product-name">Beta</span>
-                        </div>
-                    </div>
-                    <div class="header-cell">
-                        <div class="product-item">
-                            <img src="/assets/img4.png" alt="Denver" class="product-image">
-                            <span class="product-name">Denver</span>
-                        </div>
-                    </div>
-                </div>
+            <table class="comparison-table">
+                <thead class="table-header">
+                    <tr>
+                        <th class="header-cell empty">
+                            <span class="qualities-text">Qualities</span>
+                        </th>
+                        <th class="header-cell">
+                            <div class="product-item">
+                                <img src="/assets/bgSubs.png" alt="GTG" class="product-image">
+                                <span class="product-name">GTG</span>
+                            </div>
+                        </th>
+                        <th class="header-cell">
+                            <div class="product-item">
+                                <img src="/assets/img2.png" alt="Axe" class="product-image">
+                                <span class="product-name">Axe</span>
+                            </div>
+                        </th>
+                        <th class="header-cell">
+                            <div class="product-item">
+                                <img src="/assets/img3.png" alt="Beta" class="product-image">
+                                <span class="product-name">Beta</span>
+                            </div>
+                        </th>
+                        <th class="header-cell">
+                            <div class="product-item">
+                                <img src="/assets/img4.png" alt="Denver" class="product-image">
+                                <span class="product-name">Denver</span>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td class="row-label">Potency Concentration</td>
+                        <td class="cell">10x</td>
+                        <td class="cell">1x</td>
+                        <td class="cell">1x</td>
+                        <td class="cell">10x</td>
+                    </tr>
 
-                <div class="table-row">
-                    <div class="row-label">Potency Concentration</div>
-                    <div class="cell">10x</div>
-                    <div class="cell">1x</div>
-                    <div class="cell">1x</div>
-                    <div class="cell">10x</div>
-                </div>
+                    <tr class="table-row">
+                        <td class="row-label">Longevity</td>
+                        <td class="cell">
+                            <span class="check-icon">✓</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="question-icon">?</span>
+                        </td>
+                    </tr>
 
-                <div class="table-row">
-                    <div class="row-label">Longevity</div>
-                    <div class="cell">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="question-icon">?</span>
-                    </div>
-                </div>
+                    <tr class="table-row">
+                        <td class="row-label">Sillage</td>
+                        <td class="cell">
+                            <span class="check-icon">✓</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                    </tr>
 
-                <div class="table-row">
-                    <div class="row-label">Sillage</div>
-                    <div class="cell">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                </div>
+                    <tr class="table-row">
+                        <td class="row-label">Bottle Design Score</td>
+                        <td class="cell">8</td>
+                        <td class="cell">5</td>
+                        <td class="cell">6</td>
+                        <td class="cell">2</td>
+                    </tr>
 
-                <div class="table-row">
-                    <div class="row-label">Bottle Design Score</div>
-                    <div class="cell">8</div>
-                    <div class="cell">5</div>
-                    <div class="cell">6</div>
-                    <div class="cell">2</div>
-                </div>
+                    <tr class="table-row">
+                        <td class="row-label">Blend and Harmony</td>
+                        <td class="cell">
+                            <span class="check-icon">✓</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                    </tr>
 
-                <div class="table-row">
-                    <div class="row-label">Blend and Harmony</div>
-                    <div class="cell">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                </div>
+                    <tr class="table-row">
+                        <td class="row-label">Skin Compatibility</td>
+                        <td class="cell">
+                            <span class="check-icon">✓</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                    </tr>
 
-                <div class="table-row">
-                    <div class="row-label">Skin Compatibility</div>
-                    <div class="cell">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                </div>
+                    <tr class="table-row">
+                        <td class="row-label">Scent Profile</td>
+                        <td class="cell">
+                            <span class="check-icon">✓</span>
+                        </td>
+                        <td class="cell">
+                            <span class="check-icon">✓</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="question-icon">?</span>
+                        </td>
+                    </tr>
 
-                <div class="table-row">
-                    <div class="row-label">Scent Profile</div>
-                    <div class="cell">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="cell">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="question-icon">?</span>
-                    </div>
-                </div>
-
-                <div class="table-row">
-                    <div class="row-label">Price vs Quality</div>
-                    <div class="cell">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="cell">
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="cell">
-                        <span class="cross-icon">✗</span>
-                    </div>
-                    <div class="cell">
-                        <span class="question-icon">?</span>
-                    </div>
-                </div>
-            </div>
+                    <tr class="table-row">
+                        <td class="row-label">Price vs Quality</td>
+                        <td class="cell">
+                            <span class="check-icon">✓</span>
+                        </td>
+                        <td class="cell">
+                            <span class="check-icon">✓</span>
+                        </td>
+                        <td class="cell">
+                            <span class="cross-icon">✗</span>
+                        </td>
+                        <td class="cell">
+                            <span class="question-icon">?</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
             <div class="cta-section">
                 <button class="cta-button">Try It Risk-Free</button>
             </div>
         </div>
-   
     </section>
    
 
@@ -887,7 +933,7 @@
     </section>
 
     <!-- Testimonials Section -->
-   <section class="testimonials-section">
+      <section class="testimonials-section">
         <div class="container">
             <div class="testimonials-header">
                 <div class="testimonials-header-content">
@@ -895,12 +941,12 @@
                     <p class="testimonials-subtitle">Real people, real reviews.</p>
                 </div>
                 <div class="testimonials-navigation">
-                    <button class="nav-arrow nav-prev">
+                    <button class="nav-arrow nav-prev" id="prevBtn">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <button class="nav-arrow nav-next active">
+                    <button class="nav-arrow nav-next" id="nextBtn">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -908,73 +954,138 @@
                 </div>
             </div>
 
-            <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-image"></div>
-                        <div class="author-info">
-                            <div class="author-name">Name Surname</div>
-                            <div class="author-company">Position, Company name</div>
+            <div class="testimonials-wrapper">
+                <div class="testimonials-container" id="testimonialsContainer">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "This product completely transformed our workflow. The intuitive design and powerful features make it a joy to use every day. I can't imagine working without it now!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah Johnson</div>
+                                <div class="author-company">CEO, TechStart Inc.</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-image"></div>
-                        <div class="author-info">
-                            <div class="author-name">Name Surname</div>
-                            <div class="author-company">Position, Company name</div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Outstanding customer service and an amazing product! The team went above and beyond to ensure our success. Highly recommended for any business."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Chen</div>
+                                <div class="author-company">Marketing Director, GrowthCorp</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "The best investment we've made for our company. The ROI was evident within the first month, and the platform continues to exceed our expectations."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <div class="author-name">Emily Rodriguez</div>
+                                <div class="author-company">Operations Manager, Innovate Solutions</div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="testimonial-text">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-image"></div>
-                        <div class="author-info">
-                            <div class="author-name">Name Surname</div>
-                            <div class="author-company">Position, Company name</div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Incredible results from day one! The platform is user-friendly, feature-rich, and the support team is absolutely fantastic. Five stars all the way!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <div class="author-name">David Thompson</div>
+                                <div class="author-company">Product Manager, Digital Dynamics</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "A game-changer for our business operations. The seamless integration and robust analytics have helped us make better decisions and improve efficiency."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <div class="author-name">Lisa Parker</div>
+                                <div class="author-company">Data Analyst, Analytics Pro</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Perfect solution for our growing team. The collaboration features and intuitive interface make it easy for everyone to get on board quickly."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"></div>
+                            <div class="author-info">
+                                <div class="author-name">James Wilson</div>
+                                <div class="author-company">Team Lead, Collaborative Works</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="testimonials-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+            <div class="testimonials-dots" id="testimonialsDotsContainer">
+                <!-- Dots will be generated dynamically by JavaScript -->
             </div>
         </div>
     </section>
@@ -1114,23 +1225,16 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <div class="footer-bottom-content">
-        <p class="footer-copyright">&copy; 2024 GTG. All rights reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="#privacy" class="footer-bottom-link">Privacy Policy</a>
-          <a href="#terms" class="footer-bottom-link">Terms of Service</a>
-          <a href="#cookies" class="footer-bottom-link">Cookie Policy</a>
-        </div>
-      </div>
-    </div>
   </div>
 </footer>
     </div>
 
+    <script src="/Js/HeaderHumger.js"></script>
 <script src="/Js/Productscript.js"></script>
+<script src="/Js/collection.js"></script>
+<script src="/Js/Stats.js"></script>
+<script src="/Js/test.js"></script>
+
 
 </body>
 </html>
