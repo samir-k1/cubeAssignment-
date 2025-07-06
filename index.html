@@ -30,7 +30,7 @@
 </head>
 <body>
     <!-- Header Navigation -->
-   <header class="header animate-on-scroll">
+   <header class="header">
         <nav class="nav__container">
             <a href="#" class="logo">GTG</a>
             
@@ -53,16 +53,20 @@
             
             <!-- Navigation Actions -->
             <div class="nav__actions">
-                <button class="nav__search">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                </button>
+                <div class="nav__search-container">
+                    <input type="text" class="search__input" placeholder="Search products..." id="searchInput">
+                    <button class="nav__search" id="searchToggle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
                 <a href="#" class="btn btn--primary">Shop Now</a>
             </div>
         </nav>
     </header>
+
 
     <!-- Hero Section -->
     <section class="hero animate-on-scroll">
@@ -1234,7 +1238,8 @@
 <script src="/Js/collection.js"></script>
 <script src="/Js/Stats.js"></script>
 <script src="/Js/test.js"></script>
-
+<script src="/Js/searchSlide.js"></script>
+<script src="/Js/toggle.js"></script>
 
 </body>
 </html>

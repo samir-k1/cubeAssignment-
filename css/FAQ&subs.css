@@ -545,16 +545,3 @@
     }
 }
 
-/* High DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .emailSubs {
-        background-image: url('/assets//HeroSection@2x.png');
-    }
-}
-
-/* Container queries for modern browsers */
-@container (max-width: 600px) {
-    .faq-content {
-        grid-template-columns: 1fr;
-    }
-}
