@@ -197,18 +197,18 @@ function handleSearch() {
 function showSearchNotification(searchTerm) {
     // Create a simple notification
     const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--primary-green);
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-soft);
-        z-index: 1000;
-        animation: slideIn 0.3s ease;
-    `;
+    // notification.style.cssText = `
+    //     position: fixed;
+    //     top: 20px;
+    //     right: 20px;
+    //     background: var(--primary-green);
+    //     color: white;
+    //     padding: 1rem 1.5rem;
+    //     border-radius: var(--radius-md);
+    //     box-shadow: var(--shadow-soft);
+    //     z-index: 1000;
+    //     animation: slideIn 0.3s ease;
+    // `;
     notification.textContent = `Searching for: "${searchTerm}"`;
     
     document.body.appendChild(notification);
